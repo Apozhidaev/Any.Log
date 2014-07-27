@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Any.Logs.Loggers;
 
-namespace Any.Logs.Test
+namespace Any.Logs.Test.Case2
 {
     public class ConsoleLogger : IMessageLogger
     {

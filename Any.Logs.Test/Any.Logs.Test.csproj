@@ -41,12 +41,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsoleLogger.cs" />
+    <Compile Include="Case1\ConsoleLogger.cs" />
+    <Compile Include="Case1\Program.cs" />
+    <Compile Include="Case2\ConsoleLogger.cs" />
+    <Compile Include="Case2\ConsoleErrorBuilder.cs" />
+    <Compile Include="Case2\Program.cs" />
+    <Compile Include="Case3\ConsoleLogger.cs" />
+    <Compile Include="Case3\ConsoleMessageBuilder.cs" />
+    <Compile Include="Case3\LogExtentions.cs" />
+    <Compile Include="Case3\Program.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Any.Logs\Any.Logs.csproj">
@@ -54,6 +64,7 @@
       <Name>Any.Logs</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

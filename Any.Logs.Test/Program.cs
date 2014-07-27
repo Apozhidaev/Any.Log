@@ -1,5 +1,4 @@
 ﻿using System;
-using Any.Logs.Extentions;
 
 namespace Any.Logs.Test
 {
@@ -7,8 +6,11 @@ namespace Any.Logs.Test
     {
         static void Main(string[] args)
         {
-            Log.Out.InitializeDefault(new ConsoleLogger());
-            Log.Out.Error("Test message");
+
+            new Case1.Program().Test();
+            new Case2.Program().Test();
+            new Case3.Program().Test();
+
             Console.ReadKey();
         }
     }
