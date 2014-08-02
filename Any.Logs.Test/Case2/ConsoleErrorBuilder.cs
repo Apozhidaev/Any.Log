@@ -6,7 +6,7 @@ namespace Any.Logs.Test.Case2
 {
     public class ConsoleErrorBuilder : IErrorBuilder
     {
-        public string Build(string message)
+        public string Build(string message, StackTrace stackTrace)
         {
             return String.Format("{0}: {1}", Process.GetCurrentProcess().ProcessName, message);
         }

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Linq;
 using System.Text;
 
 namespace Any.Logs.Builders.Extentions
@@ -26,6 +28,11 @@ namespace Any.Logs.Builders.Extentions
                 }
             }
             return fullMessage.ToString();
+        }
+
+        public static string GetCallerMethodName(this StackTrace stackTrace)
+        {
+            return stackTrace.GetFrame(0).GetMethod().Name;
         }
     }
 }

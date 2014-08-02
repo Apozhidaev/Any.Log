@@ -1,5 +1,4 @@
-﻿using System.Configuration;
-using System.Net;
+﻿using System.Net;
 using System.Net.Mail;
 using Any.Logs.Loggers.Emails.Configuration;
 

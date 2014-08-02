@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
+using Any.Logs.Builders.Extentions;
 using Any.Logs.Extentions;
 
 namespace Any.Logs
@@ -48,20 +48,11 @@ namespace Any.Logs
         {
             get { return _contentBuilder; }
         }
-
-#if NET4
         public Task WriteAsync<T>(Func<T, Task> writer) where T : ILogger
         {
             var stackTrace = new StackTrace();
-            var method = stackTrace.GetFrame(1).GetMethod();
-            return _loggerManager.WriteAsync(method.Name, writer);
+            return _loggerManager.WriteAsync(stackTrace.GetCallerMethodName(), writer);
         }
-#else
-        public Task WriteAsync<T>(Func<T, Task> writer, [CallerMemberName] string methodName = "") where T : ILogger
-        {
-            return _loggerManager.WriteAsync(methodName, writer);
-        }
-#endif
 
         private void OnUnhandledException(object sender, UnhandledExceptionEventArgs e)
         {

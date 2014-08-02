@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="Builders\Extentions\ExceptionExtentions.cs" />
     <Compile Include="Builders\IErrorBuilder.cs" />
+    <Compile Include="Builders\IInfoBuilder.cs" />
+    <Compile Include="Builders\InfoBuilder.cs" />
     <Compile Include="Loggers\Emails\Configuration\EmailElement.cs" />
     <Compile Include="Loggers\Emails\Configuration\EmailElementCollection.cs" />
     <Compile Include="Loggers\Emails\Configuration\EmailLoggerSection.cs" />

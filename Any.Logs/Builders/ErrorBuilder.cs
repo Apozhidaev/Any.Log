@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using Any.Logs.Builders.Extentions;
 
 namespace Any.Logs.Builders
@@ -12,14 +13,14 @@ namespace Any.Logs.Builders
             get { return _instance; }
         }
 
-        public string Build(string message)
+        public string Build(string message, StackTrace stackTrace)
         {
-            return message;
+            return String.Format("[Error] - {1}{0}{2}{0}{3}", Environment.NewLine, DateTime.Now, message, stackTrace);
         }
 
         public string Build(string message, Exception e)
         {
-            return String.Format("{0}{1}{2}", message, Environment.NewLine, e.GetFullMessage());
+            return String.Format("[Error] - {1}{0}{2}{0}{3}", Environment.NewLine, DateTime.Now, message, e.GetFullMessage());
         }
     }
 }
