@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using Any.Logs.Builders;
 using Any.Logs.Builders.Extentions;
-using Any.Logs.Extentions;
+using Any.Logs.Loggers;
 
 namespace Any.Logs
 {
@@ -50,14 +51,15 @@ namespace Any.Logs
         }
         public Task WriteAsync<T>(Func<T, Task> writer) where T : ILogger
         {
-            var stackTrace = new StackTrace();
+            var stackTrace = new StackTrace(1);
             return _loggerManager.WriteAsync(stackTrace.GetCallerMethodName(), writer);
         }
 
         private void OnUnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
             var exception = (Exception) e.ExceptionObject;
-            Out.Error(exception, "Unhandled exception")
+            var builder = ContentBuilder as IContentBuilder ?? EmptyContentBuilder.Instance;
+            WriteAsync<IEventLogger>(logger => logger.WriteAsync(builder.Summary("Unhandled exception"), builder.Description(exception)))
                 .ContinueWith(_ => _loggerManager.Flush());
         }
 

@@ -8,7 +8,7 @@ using Any.Logs.Loggers.Files.Configuration;
 
 namespace Any.Logs.Loggers.Files
 {
-    internal class FileLogger : IMessageLogger
+    internal class FileLogger : IEventLogger
     {
         private readonly HashSet<string> _methods = new HashSet<string>();
         private readonly Mutex _mutex;
@@ -53,23 +53,23 @@ namespace Any.Logs.Loggers.Files
             return _methods.Count == 0 || _methods.Contains(methodName);
         }
 
+        public Task WriteAsync(string summary, string description)
+        {
+            return Task.Factory.StartNew(() => AddToFile(summary, description));
+        }
+
         public virtual void Flush()
         {
         }
 
-        public Task WriteAsync(string message)
-        {
-            return Task.Factory.StartNew(() => AddToFile(message));
-        }
-
-        private void AddToFile(string message)
+        private void AddToFile(string summary, string description)
         {
             try
             {
                 _mutex.WaitOne();
                 File.AppendAllText(String.Format("{0}\\log-{1}.txt", _path, DateTime.Now.ToString(Formats.SortedDate)),
-                    String.Format("{1}{0}{1}==================================================={1}", message,
-                        Environment.NewLine));
+                    String.Format("{0}{1}{0}{2}{0}==================================================={1}", Environment.NewLine,
+                        summary, description));
             }
             finally
             {

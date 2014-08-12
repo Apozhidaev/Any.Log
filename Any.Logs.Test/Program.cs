@@ -7,8 +7,8 @@ namespace Any.Logs.Test
         static void Main(string[] args)
         {
 
-            new Case1.Program().Test();
-            new Case2.Program().Test();
+            //new Case1.Program().Test();
+            //new Case2.Program().Test();
             new Case3.Program().Test();
 
             Console.ReadKey();

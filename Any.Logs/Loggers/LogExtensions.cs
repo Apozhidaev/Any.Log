@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
+using Any.Logs.Builders;
 using Any.Logs.Loggers.Emails;
 using Any.Logs.Loggers.Emails.Configuration;
 using Any.Logs.Loggers.Files;
@@ -31,7 +32,7 @@ namespace Any.Logs.Loggers
                 loggerList.AddRange(emailConfig.Loggers.OfType<EmailElement>().Select(loggerConfig => new EmailLogger(loggerConfig, emailConfig)));
             }
 
-            Log.Initialize(contentBuilder, loggerList.ToArray());
+            Log.Initialize(contentBuilder ?? new DefaultContentBuilder(), loggerList.ToArray());
         }
     }
 }

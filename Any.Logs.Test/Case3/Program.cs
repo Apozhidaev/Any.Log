@@ -5,7 +5,7 @@
         public void Test()
         {
             Log.Initialize(new ConsoleMessageBuilder(), new ConsoleLogger());
-            Log.Out.Message(777 ,"Test message");
+            //Log.Out.Message(777 ,"Test message");
         }
     }
 }

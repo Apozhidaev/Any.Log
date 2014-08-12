@@ -8,8 +8,9 @@ namespace Any.Logs.Test.Case1
         public void Test()
         {
             Log.Initialize(new ConsoleLogger());
+
             Log.Out.Info("Test info");
-            Log.Out.Error("Test error");
+            //Log.Out.Error("Test error");
         }
     }
 }

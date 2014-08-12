@@ -4,13 +4,18 @@ using Any.Logs.Loggers;
 
 namespace Any.Logs.Test.Case3
 {
-    public class ConsoleLogger : IMessageLogger
+    public class ConsoleLogger : IEventLogger
     {
         public void Flush() { }
 
         public bool IsEnabledFor(string methodName)
         {
             return true;
+        }
+
+        public Task WriteAsync(string summary, string description)
+        {
+            throw new NotImplementedException();
         }
 
         public Task WriteAsync(string message)

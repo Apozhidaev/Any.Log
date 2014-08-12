@@ -4,7 +4,7 @@ using Any.Logs.Builders;
 
 namespace Any.Logs.Test.Case2
 {
-    public class ConsoleErrorBuilder : IErrorBuilder
+    public class ConsoleErrorBuilder 
     {
         public string Build(string message, StackTrace stackTrace)
         {
@@ -14,6 +14,21 @@ namespace Any.Logs.Test.Case2
         public string Build(string message, Exception e)
         {
             return String.Format("{0}{1}{2}", message, Environment.NewLine, e.Message);
+        }
+
+        public string Summary(string summary)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string Description(StackTrace stackTrace)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string Description(Exception e)
+        {
+            throw new NotImplementedException();
         }
     }
 }
