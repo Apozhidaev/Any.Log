@@ -18,11 +18,11 @@ namespace Any.Logs
             _loggers = loggers;
         }
 
-        public Task WriteAsync<T>(string methodName, Func<T, Task> writer) where T : ILogger
+        public Task WriteAsync<T>(string method, Func<T, Task> writer) where T : ILogger
         {
             Task task = Task.Factory.StartNew(() => Task.WaitAll(
                 _loggers.OfType<T>()
-                    .Where(logger => logger.IsEnabledFor(methodName))
+                    .Where(logger => logger.IsEnabledFor(method))
                     .Select(writer).ToArray()));
 
             lock (_waitingList)

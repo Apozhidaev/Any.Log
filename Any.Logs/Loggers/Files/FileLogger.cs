@@ -8,7 +8,7 @@ using Any.Logs.Loggers.Files.Configuration;
 
 namespace Any.Logs.Loggers.Files
 {
-    internal class FileLogger : IEventLogger
+    internal class FileLogger : LoggerBase
     {
         private readonly HashSet<string> _methods = new HashSet<string>();
         private readonly Mutex _mutex;
@@ -48,18 +48,14 @@ namespace Any.Logs.Loggers.Files
             _mutex = new Mutex(false, mutexName);
         }
 
-        public bool IsEnabledFor(string methodName)
+        public override bool IsEnabledFor(string method)
         {
-            return _methods.Count == 0 || _methods.Contains(methodName);
+            return _methods.Count == 0 || _methods.Contains(method);
         }
 
-        public Task WriteAsync(string summary, string description)
+        public override Task WriteAsync(string summary, string description)
         {
             return Task.Factory.StartNew(() => AddToFile(summary, description));
-        }
-
-        public virtual void Flush()
-        {
         }
 
         private void AddToFile(string summary, string description)

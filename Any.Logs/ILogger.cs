@@ -4,6 +4,6 @@
     {
         void Flush();
 
-        bool IsEnabledFor(string methodName);
+        bool IsEnabledFor(string method);
     }
 }

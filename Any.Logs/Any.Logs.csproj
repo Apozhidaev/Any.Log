@@ -43,10 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Builders\EmptyContentBuilder.cs" />
-    <Compile Include="Builders\DefaultContentBuilder.cs" />
-    <Compile Include="Builders\Extentions\ExceptionExtentions.cs" />
-    <Compile Include="Builders\IContentBuilder.cs" />
+    <Compile Include="Extentions\ExceptionExtentions.cs" />
     <Compile Include="Loggers\Emails\Configuration\EmailElement.cs" />
     <Compile Include="Loggers\Emails\Configuration\EmailElementCollection.cs" />
     <Compile Include="Loggers\Emails\Configuration\EmailLoggerSection.cs" />
@@ -56,8 +53,7 @@
     <Compile Include="Loggers\Files\Configuration\FileLoggerSection.cs" />
     <Compile Include="Loggers\Files\Formats.cs" />
     <Compile Include="Loggers\Files\ArgumentHelper.cs" />
-    <Compile Include="Loggers\IEventLogger.cs" />
-    <Compile Include="Extentions\LogExtensions.cs" />
+    <Compile Include="Loggers\LoggerBase.cs" />
     <Compile Include="Loggers\Emails\EmailLogger.cs" />
     <Compile Include="Loggers\Files\FileLogger.cs" />
     <Compile Include="ILogger.cs" />

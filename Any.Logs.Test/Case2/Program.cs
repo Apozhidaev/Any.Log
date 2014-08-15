@@ -1,4 +1,4 @@
-﻿using Any.Logs.Extentions;
+﻿using Any.Logs.Loggers;
 
 namespace Any.Logs.Test.Case2
 {
@@ -6,7 +6,7 @@ namespace Any.Logs.Test.Case2
     {
         public void Test()
         {
-            Log.Initialize(new ConsoleErrorBuilder(), new ConsoleLogger());
+            Log.Initialize(new ConsoleLogger());
             Log.Out.Error("Test message");
         }
     }

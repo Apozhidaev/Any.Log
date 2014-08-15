@@ -4,7 +4,7 @@ using Any.Logs.Loggers;
 
 namespace Any.Logs.Test.Case2
 {
-    public class ConsoleLogger : IEventLogger
+    public class ConsoleLogger : LoggerBase
     {
         public void Flush() { }
 
@@ -13,7 +13,7 @@ namespace Any.Logs.Test.Case2
             return true;
         }
 
-        public Task WriteAsync(string summary, string description)
+        public override Task WriteAsync(string summary, string description)
         {
             throw new NotImplementedException();
         }
