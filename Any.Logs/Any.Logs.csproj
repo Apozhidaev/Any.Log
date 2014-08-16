@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extentions\LogExtensions.cs" />
     <Compile Include="Extentions\ExceptionExtentions.cs" />
     <Compile Include="Loggers\Emails\Configuration\EmailElement.cs" />
     <Compile Include="Loggers\Emails\Configuration\EmailElementCollection.cs" />
@@ -53,7 +54,7 @@
     <Compile Include="Loggers\Files\Configuration\FileLoggerSection.cs" />
     <Compile Include="Loggers\Files\Formats.cs" />
     <Compile Include="Loggers\Files\ArgumentHelper.cs" />
-    <Compile Include="Loggers\LoggerBase.cs" />
+    <Compile Include="Loggers\MessageLogger.cs" />
     <Compile Include="Loggers\Emails\EmailLogger.cs" />
     <Compile Include="Loggers\Files\FileLogger.cs" />
     <Compile Include="ILogger.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="Loggers\LogExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

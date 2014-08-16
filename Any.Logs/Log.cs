@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using Any.Logs.Builders.Extentions;
+using Any.Logs.Extentions;
 using Any.Logs.Loggers;
 
 namespace Any.Logs
@@ -45,9 +45,9 @@ namespace Any.Logs
         {
             const string method = "Error";
             var exception = (Exception)e.ExceptionObject;
-            _loggerManager.WriteAsync<LoggerBase>(method,
-                logger => logger.WriteAsync("Unhandled exception", exception.GetFullMessage()))
-                    .ContinueWith(_ => _loggerManager.Flush());
+            _loggerManager.WriteAsync<MessageLogger>(method,
+                logger => logger.WriteAsync(String.Format("{1}{0}{2}", Environment.NewLine, "Unhandled exception", exception.GetFullMessage())))
+                    .ContinueWith(_ => _loggerManager.Flush()).Wait();
         }
 
         private void OnProcessExit(object sender, EventArgs e)

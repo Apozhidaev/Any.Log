@@ -9,7 +9,7 @@ namespace Any.Logs.Test
 
             //new Case1.Program().Test();
             //new Case2.Program().Test();
-            new Case3.Program().Test();
+            //new Case3.Program().Test();
 
             Console.ReadKey();
         }

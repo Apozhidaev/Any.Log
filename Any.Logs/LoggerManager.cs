@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using Any.Logs.Builders.Extentions;
+using Any.Logs.Extentions;
 
 namespace Any.Logs
 {

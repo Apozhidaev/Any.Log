@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Diagnostics;
-using Any.Logs.Builders;
 
 namespace Any.Logs.Test.Case2
 {

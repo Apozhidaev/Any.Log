@@ -2,7 +2,7 @@
 
 namespace Any.Logs.Loggers
 {
-    public abstract class LoggerBase : ILogger
+    public abstract class MessageLogger : ILogger
     {
         public virtual void Flush() { }
 
@@ -11,6 +11,6 @@ namespace Any.Logs.Loggers
             return true;
         }
 
-        public abstract Task WriteAsync(string summary, string description);
+        public abstract Task WriteAsync(string message);
     }
 }

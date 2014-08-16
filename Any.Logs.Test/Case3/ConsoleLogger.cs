@@ -1,26 +1,26 @@
-﻿using System;
-using System.Threading.Tasks;
-using Any.Logs.Loggers;
+﻿//using System;
+//using System.Threading.Tasks;
+//using Any.Logs.Loggers;
 
-namespace Any.Logs.Test.Case3
-{
-    public class ConsoleLogger : LoggerBase
-    {
-        public void Flush() { }
+//namespace Any.Logs.Test.Case3
+//{
+//    public class ConsoleLogger : MessageLogger
+//    {
+//        public void Flush() { }
 
-        public bool IsEnabledFor(string methodName)
-        {
-            return true;
-        }
+//        public bool IsEnabledFor(string methodName)
+//        {
+//            return true;
+//        }
 
-        public override Task WriteAsync(string summary, string description)
-        {
-            throw new NotImplementedException();
-        }
+//        public override Task WriteAsync(string summary, string description)
+//        {
+//            throw new NotImplementedException();
+//        }
 
-        public Task WriteAsync(string message)
-        {
-            return Task.Run(() => Console.WriteLine(message));
-        }
-    }
-}
+//        public Task WriteAsync(string message)
+//        {
+//            return Task.Run(() => Console.WriteLine(message));
+//        }
+//    }
+//}

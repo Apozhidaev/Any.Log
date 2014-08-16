@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Linq;
 using System.Text;
 
-namespace Any.Logs.Builders.Extentions
+namespace Any.Logs.Extentions
 {
     public static class ExceptionExtentions
     {

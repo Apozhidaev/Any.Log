@@ -8,7 +8,7 @@ using Any.Logs.Loggers.Emails.Configuration;
 
 namespace Any.Logs.Loggers.Emails
 {
-    internal class EmailLogger : LoggerBase
+    internal class EmailLogger : MessageLogger
     {
         private readonly EmailElement _config;
 
@@ -44,15 +44,13 @@ namespace Any.Logs.Loggers.Emails
             return _methods.Count == 0 || _methods.Contains(method);
         }
 
-        public override Task WriteAsync(string summary, string description)
+        public override Task WriteAsync(string message)
         {
             return Task.Factory.StartNew(() =>
             {
                 lock (_message)
                 {
-                    _message.Append(summary.Replace(Environment.NewLine, "<br>"));
-                    _message.Append("<br>");
-                    _message.Append(description.Replace(Environment.NewLine, "<br>"));
+                    _message.Append(message.Replace(Environment.NewLine, "<br>"));
                     _message.Append("<br>===================================================<br>");
                 }
             });
