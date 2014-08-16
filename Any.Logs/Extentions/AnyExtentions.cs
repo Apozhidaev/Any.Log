@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Any.Logs.Extentions
 {
-    public static class ExceptionExtentions
+    public static class AnyExtentions
     {
         public static string GetFullMessage(this Exception exception)
         {
@@ -32,6 +32,11 @@ namespace Any.Logs.Extentions
         public static string GetCallerMethodName(this StackTrace stackTrace)
         {
             return stackTrace.GetFrame(0).GetMethod().Name;
+        }
+
+        public static string Format(this string str, object[] values)
+        {
+            return values.Length > 0 ? String.Format(str, values) : str;
         }
     }
 }

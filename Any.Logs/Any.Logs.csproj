@@ -43,11 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Extentions\LogExtensions.cs" />
-    <Compile Include="Extentions\ExceptionExtentions.cs" />
+    <Compile Include="Extentions\AnyExtentions.cs" />
     <Compile Include="Loggers\Emails\Configuration\EmailElement.cs" />
     <Compile Include="Loggers\Emails\Configuration\EmailElementCollection.cs" />
     <Compile Include="Loggers\Emails\Configuration\EmailLoggerSection.cs" />
+    <Compile Include="Loggers\Extentions\LogExtensions.cs" />
     <Compile Include="Loggers\Files\Arguments.cs" />
     <Compile Include="Loggers\Files\Configuration\FileElement.cs" />
     <Compile Include="Loggers\Files\Configuration\FileElementCollection.cs" />
