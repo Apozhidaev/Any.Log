@@ -8,23 +8,26 @@ namespace Any.Logs.Loggers.Extentions
     {
         public static void Error(this Log log, string summary, params object[] values)
         {
-            var stackTrace = new StackTrace(1);
-            log.WriteAsync<MessageLogger>(logger => logger.WriteAsync(String.Format("{1}{0}{2}", Environment.NewLine, summary.Format(values), stackTrace.ToString())));
+            var message = String.Format("[Error] - {1}{0}{2}{0}{3}", Environment.NewLine, DateTime.Now, summary.Format(values),  new StackTrace(1));
+            log.WriteAsync<MessageLogger>(logger => logger.WriteAsync(message));
         }
 
         public static void Error(this Log log, Exception e, string summary, params object[] values)
         {
-            log.WriteAsync<MessageLogger>(logger => logger.WriteAsync(String.Format("{1}{0}{2}", Environment.NewLine, summary.Format(values), e.GetFullMessage())));
+            var message = String.Format("[Error] - {1}{0}{2}{0}{3}", Environment.NewLine, DateTime.Now, summary.Format(values), e.GetFullMessage());
+            log.WriteAsync<MessageLogger>(logger => logger.WriteAsync(message));
         }
 
         public static void Info(this Log log, string summary, params object[] values)
         {
-            log.WriteAsync<MessageLogger>(logger => logger.WriteAsync(summary.Format(values)));
+            var message = String.Format("[Info] - {1}{0}{2}", Environment.NewLine, DateTime.Now, summary.Format(values));
+            log.WriteAsync<MessageLogger>(logger => logger.WriteAsync(message));
         }
 
         public static void Info(this Log log, string description, string summary, params object[] values)
         {
-            log.WriteAsync<MessageLogger>(logger => logger.WriteAsync(String.Format("{1}{0}{2}", Environment.NewLine, summary.Format(values), description)));
+            var message = String.Format("[Info] - {1}{0}{2}{0}{3}", Environment.NewLine, DateTime.Now, summary.Format(values), description);
+            log.WriteAsync<MessageLogger>(logger => logger.WriteAsync(message));
         }
     }
 }
