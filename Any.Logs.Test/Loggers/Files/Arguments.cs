@@ -1,4 +1,4 @@
-﻿namespace Any.Logs.Loggers.Files
+﻿namespace Any.Logs.Test.Loggers.Files
 {
     internal static class Arguments
     {

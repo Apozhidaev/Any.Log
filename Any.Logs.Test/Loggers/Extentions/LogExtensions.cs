@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
-using Any.Logs.Extentions;
+using Any.Logs.Test.Extentions;
 
-namespace Any.Logs.Loggers.Extentions
+namespace Any.Logs.Test.Loggers.Extentions
 {
     public static class LogExtensions
     {

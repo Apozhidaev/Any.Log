@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Any.Logs.Loggers
+namespace Any.Logs.Test.Loggers
 {
     public abstract class MessageLogger : ILogger
     {

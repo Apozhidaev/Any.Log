@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Any.Logs.Loggers;
 
 namespace Any.Logs.Test.Case3
 {

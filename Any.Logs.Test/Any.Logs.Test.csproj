@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -50,6 +51,24 @@
     <Compile Include="Case3\ConsoleMessageBuilder.cs" />
     <Compile Include="Case3\LogExtentions.cs" />
     <Compile Include="Case3\Program.cs" />
+    <Compile Include="Extentions\AnyExtentions.cs" />
+    <Compile Include="Loggers\Emails\Configuration\EmailElement.cs" />
+    <Compile Include="Loggers\Emails\Configuration\EmailElementCollection.cs" />
+    <Compile Include="Loggers\Emails\Configuration\EmailLoggerSection.cs" />
+    <Compile Include="Loggers\Emails\EmailLogger.cs" />
+    <Compile Include="Loggers\Emails\EmailModel.cs" />
+    <Compile Include="Loggers\Emails\EmailService.cs" />
+    <Compile Include="Loggers\Extentions\LogExtensions.cs" />
+    <Compile Include="Loggers\Files\ArgumentHelper.cs" />
+    <Compile Include="Loggers\Files\Arguments.cs" />
+    <Compile Include="Loggers\Files\Configuration\FileElement.cs" />
+    <Compile Include="Loggers\Files\Configuration\FileElementCollection.cs" />
+    <Compile Include="Loggers\Files\Configuration\FileLoggerSection.cs" />
+    <Compile Include="Loggers\Files\FileLogger.cs" />
+    <Compile Include="Loggers\Files\Formats.cs" />
+    <Compile Include="Loggers\Files\Patterns.cs" />
+    <Compile Include="Loggers\LogExtensions.cs" />
+    <Compile Include="Loggers\MessageLogger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

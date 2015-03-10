@@ -1,6 +1,6 @@
 ﻿using System.Configuration;
 
-namespace Any.Logs.Loggers.Files.Configuration
+namespace Any.Logs.Test.Loggers.Files.Configuration
 {
     [ConfigurationCollection(typeof(FileElement), AddItemName = "logger",
         CollectionType = ConfigurationElementCollectionType.BasicMap)]

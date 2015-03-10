@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using Any.Logs.Loggers.Emails.Configuration;
+using Any.Logs.Test.Loggers.Emails.Configuration;
 
-namespace Any.Logs.Loggers.Emails
+namespace Any.Logs.Test.Loggers.Emails
 {
     internal class EmailLogger : MessageLogger
     {

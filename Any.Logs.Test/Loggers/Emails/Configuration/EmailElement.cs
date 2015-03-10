@@ -1,6 +1,6 @@
 ﻿using System.Configuration;
 
-namespace Any.Logs.Loggers.Emails.Configuration
+namespace Any.Logs.Test.Loggers.Emails.Configuration
 {
     public class EmailElement : ConfigurationElement
     {

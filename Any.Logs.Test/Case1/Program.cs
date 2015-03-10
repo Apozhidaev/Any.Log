@@ -1,5 +1,4 @@
 ﻿using System;
-using Any.Logs.Loggers;
 
 namespace Any.Logs.Test.Case1
 {

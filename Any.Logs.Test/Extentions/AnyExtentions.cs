@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Text;
 
-namespace Any.Logs.Extentions
+namespace Any.Logs.Test.Extentions
 {
     public static class AnyExtentions
     {
@@ -27,11 +27,6 @@ namespace Any.Logs.Extentions
                 }
             }
             return fullMessage.ToString();
-        }
-
-        public static string GetCallerMethodName(this StackTrace stackTrace)
-        {
-            return stackTrace.GetFrame(0).GetMethod().Name;
         }
 
         public static string Format(this string str, object[] values)

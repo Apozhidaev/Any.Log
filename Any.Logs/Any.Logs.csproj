@@ -34,36 +34,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Extentions\AnyExtentions.cs" />
-    <Compile Include="Loggers\Emails\Configuration\EmailElement.cs" />
-    <Compile Include="Loggers\Emails\Configuration\EmailElementCollection.cs" />
-    <Compile Include="Loggers\Emails\Configuration\EmailLoggerSection.cs" />
-    <Compile Include="Loggers\Extentions\LogExtensions.cs" />
-    <Compile Include="Loggers\Files\Arguments.cs" />
-    <Compile Include="Loggers\Files\Configuration\FileElement.cs" />
-    <Compile Include="Loggers\Files\Configuration\FileElementCollection.cs" />
-    <Compile Include="Loggers\Files\Configuration\FileLoggerSection.cs" />
-    <Compile Include="Loggers\Files\Formats.cs" />
-    <Compile Include="Loggers\Files\ArgumentHelper.cs" />
-    <Compile Include="Loggers\MessageLogger.cs" />
-    <Compile Include="Loggers\Emails\EmailLogger.cs" />
-    <Compile Include="Loggers\Files\FileLogger.cs" />
     <Compile Include="ILogger.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="LoggerManager.cs" />
-    <Compile Include="Loggers\Files\Patterns.cs" />
-    <Compile Include="Loggers\Emails\EmailService.cs" />
-    <Compile Include="Loggers\Emails\EmailModel.cs" />
-    <Compile Include="Loggers\LogExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

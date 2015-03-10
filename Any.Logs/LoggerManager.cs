@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using Any.Logs.Extentions;
 
 namespace Any.Logs
 {
@@ -50,9 +49,8 @@ namespace Any.Logs
             {
                 Task.WaitAll(waitingTasks);
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                Debug.WriteLine(e.GetFullMessage());
                 Debug.Fail("LoggerManager.Flush exception");
             }
             foreach (ILogger logger in _loggers)

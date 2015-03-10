@@ -4,9 +4,9 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Any.Logs.Loggers.Files.Configuration;
+using Any.Logs.Test.Loggers.Files.Configuration;
 
-namespace Any.Logs.Loggers.Files
+namespace Any.Logs.Test.Loggers.Files
 {
     internal class FileLogger : MessageLogger
     {

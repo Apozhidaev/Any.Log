@@ -1,4 +1,4 @@
-﻿namespace Any.Logs.Loggers.Emails
+﻿namespace Any.Logs.Test.Loggers.Emails
 {
     internal class EmailModel
     {

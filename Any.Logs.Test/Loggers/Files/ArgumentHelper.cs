@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Any.Logs.Loggers.Files
+namespace Any.Logs.Test.Loggers.Files
 {
     internal static class ArgumentHelper
     {

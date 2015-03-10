@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
-using Any.Logs.Loggers.Emails;
-using Any.Logs.Loggers.Emails.Configuration;
-using Any.Logs.Loggers.Files;
-using Any.Logs.Loggers.Files.Configuration;
+using Any.Logs.Test.Loggers.Emails;
+using Any.Logs.Test.Loggers.Emails.Configuration;
+using Any.Logs.Test.Loggers.Files;
+using Any.Logs.Test.Loggers.Files.Configuration;
 
-namespace Any.Logs.Loggers
+namespace Any.Logs.Test.Loggers
 {
     public static class LogExtensions
     {

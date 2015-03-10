@@ -1,8 +1,8 @@
 ﻿using System.Net;
 using System.Net.Mail;
-using Any.Logs.Loggers.Emails.Configuration;
+using Any.Logs.Test.Loggers.Emails.Configuration;
 
-namespace Any.Logs.Loggers.Emails
+namespace Any.Logs.Test.Loggers.Emails
 {
     internal class EmailService
     {
