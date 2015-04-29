@@ -39,6 +39,7 @@
   <ItemGroup>
     <Compile Include="ILogger.cs" />
     <Compile Include="Log.cs" />
+    <Compile Include="LoggerBase.cs" />
     <Compile Include="LoggerManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
