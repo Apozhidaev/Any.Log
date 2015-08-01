@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Threading.Tasks;
 
-namespace Any.Logs
+namespace Bo.Logs
 {
     public class Log
     {

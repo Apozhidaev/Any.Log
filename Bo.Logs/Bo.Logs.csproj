@@ -7,8 +7,8 @@
     <ProjectGuid>{108B3DA4-5816-408E-84BB-8FED6F69123C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Any.Logs</RootNamespace>
-    <AssemblyName>Any.Logs</AssemblyName>
+    <RootNamespace>Bo.Logs</RootNamespace>
+    <AssemblyName>Bo.Log</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

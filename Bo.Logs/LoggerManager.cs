@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Any.Logs
+namespace Bo.Logs
 {
     internal class LoggerManager
     {

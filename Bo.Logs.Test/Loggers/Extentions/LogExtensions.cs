@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using Any.Logs.Test.Extentions;
+using Bo.Logs;
 
 namespace Any.Logs.Test.Loggers.Extentions
 {

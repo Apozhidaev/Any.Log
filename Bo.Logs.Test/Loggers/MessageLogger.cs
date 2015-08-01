@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using Bo.Logs;
 
 namespace Any.Logs.Test.Loggers
 {

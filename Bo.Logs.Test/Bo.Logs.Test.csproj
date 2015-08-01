@@ -7,8 +7,8 @@
     <ProjectGuid>{B6719E85-A2C6-435A-B087-B91EF28186D6}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Any.Logs.Test</RootNamespace>
-    <AssemblyName>Any.Logs.Test</AssemblyName>
+    <RootNamespace>Bo.Logs.Test</RootNamespace>
+    <AssemblyName>Bo.Logs.Test</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -78,9 +78,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Any.Logs\Any.Logs.csproj">
+    <ProjectReference Include="..\Bo.Logs\Bo.Logs.csproj">
       <Project>{108b3da4-5816-408e-84bb-8fed6f69123c}</Project>
-      <Name>Any.Logs</Name>
+      <Name>Bo.Logs</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

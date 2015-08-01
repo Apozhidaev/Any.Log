@@ -5,6 +5,7 @@ using Any.Logs.Test.Loggers.Emails;
 using Any.Logs.Test.Loggers.Emails.Configuration;
 using Any.Logs.Test.Loggers.Files;
 using Any.Logs.Test.Loggers.Files.Configuration;
+using Bo.Logs;
 
 namespace Any.Logs.Test.Loggers
 {

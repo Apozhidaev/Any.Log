@@ -1,4 +1,4 @@
-﻿namespace Any.Logs
+﻿namespace Bo.Logs
 {
     public interface ILogger
     {

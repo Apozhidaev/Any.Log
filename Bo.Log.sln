@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Any.Logs", "Any.Logs\Any.Logs.csproj", "{108B3DA4-5816-408E-84BB-8FED6F69123C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bo.Logs", "Bo.Logs\Bo.Logs.csproj", "{108B3DA4-5816-408E-84BB-8FED6F69123C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Any.Logs.Test", "Any.Logs.Test\Any.Logs.Test.csproj", "{B6719E85-A2C6-435A-B087-B91EF28186D6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bo.Logs.Test", "Bo.Logs.Test\Bo.Logs.Test.csproj", "{B6719E85-A2C6-435A-B087-B91EF28186D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
