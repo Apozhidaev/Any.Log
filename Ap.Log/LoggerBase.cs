@@ -2,8 +2,8 @@
 {
     public abstract class LoggerBase : ILogger
     {
-        public void Flush() { }
+        public virtual void Flush() { }
 
-        public bool IsEnabledFor(string method) { return true; }
+        public virtual bool IsEnabledFor(string method) { return true; }
     }
 }
