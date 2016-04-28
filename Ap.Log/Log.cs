@@ -6,16 +6,18 @@ namespace Ap.Logs
 {
     public class Log
     {
-        private static Log _out;
-
-        public static Log Out
-        {
-            get { return _out; }
-        }
+        private static Action<Exception> _unhandler;
+        public static Log Out { get; private set; }
 
         public static void Initialize(params ILogger[] loggers)
         {
-            _out = new Log(loggers);
+            Out = new Log(loggers);
+        }
+
+        public static void Initialize(Action<Exception> unhandler, params ILogger[] loggers)
+        {
+            _unhandler = unhandler;
+            Initialize(loggers);
         }
 
         private readonly LoggerManager _loggerManager;
@@ -30,14 +32,20 @@ namespace Ap.Logs
             _loggerManager = new LoggerManager(loggers);
 
             AppDomain.CurrentDomain.ProcessExit += OnProcessExit;
-            AppDomain.CurrentDomain.UnhandledException += OnProcessExit;
+            AppDomain.CurrentDomain.UnhandledException += OnUnhandledException;
         }
 
         public Task WriteAsync<T>(Func<T, Task> writer) where T : ILogger
         {
             var stackTrace = new StackTrace(1);
-            var method =  stackTrace.GetFrame(0).GetMethod().Name;;
+            var method =  stackTrace.GetFrame(0).GetMethod().Name;
             return _loggerManager.WriteAsync(method, writer);
+        }
+
+        private void OnUnhandledException(object sender, UnhandledExceptionEventArgs e)
+        {
+            _unhandler?.Invoke(e.ExceptionObject as Exception);
+            OnProcessExit(sender, e);
         }
 
         private void OnProcessExit(object sender, EventArgs e)
