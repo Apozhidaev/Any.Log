@@ -37,6 +37,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExceptionExtensions.cs" />
     <Compile Include="ILogger.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="LoggerBase.cs" />
