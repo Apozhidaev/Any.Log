@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 
 namespace Ap.Logs
@@ -35,10 +36,8 @@ namespace Ap.Logs
             AppDomain.CurrentDomain.UnhandledException += OnUnhandledException;
         }
 
-        public Task WriteAsync<T>(Func<T, Task> writer) where T : ILogger
+        public Task WriteAsync<T>(Func<T, Task> writer, [CallerMemberName]string method = "") where T : ILogger
         {
-            var stackTrace = new StackTrace(1);
-            var method =  stackTrace.GetFrame(0).GetMethod().Name;
             return _loggerManager.WriteAsync(method, writer);
         }
 
